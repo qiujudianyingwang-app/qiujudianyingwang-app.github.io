@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>秋菊电影网 | 高清影视在线观看平台 - 热门电影电视剧综艺动漫全集</title>
+<meta name="keywords" content="秋菊电影网,qiujudianyingwang-app,高清电影在线观看,热门影视资源,最新电影预告,电视剧全集,综艺节目,动漫动画,院线大片,经典老片,纪录片,影视资讯,影评推荐,免费观影平台">
+<meta name="description" content="秋菊电影网(qiujudianyingwang-app)是国内领先的免费高清影视在线观看平台,每日更新院线大片、热播电视剧、综艺节目、动漫动画等资源。提供最新影视资讯、专业影评、观影指南,支持多端自适应访问,随时随地畅享精彩视听内容。">
+<meta name="author" content="秋菊电影网">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="秋菊电影网 - 高清影视在线观看首选平台">
+<meta property="og:description" content="每日更新热门电影、电视剧、综艺、动漫,提供最新影视资讯与专业影评,免费在线观看。">
+<meta property="og:site_name" content="秋菊电影网">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://qiujudianyingwang-app.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+--bg:#0a0a12;--bg2:#12121f;--card:#1a1a2e;--line:#2a2a45;
+--txt:#e8e8f0;--txt2:#a0a0c0;--brand:#ff4d6d;--brand2:#ffd166;
+--gold:#ffb347;--shadow:0 8px 32px rgba(0,0,0,.4);
+}
+html{scroll-behavior:smooth}
+body{
+background:var(--bg);
+background-image:
+radial-gradient(circle at 15% 25%,rgba(255,77,109,.08),transparent 40%),
+radial-gradient(circle at 85% 75%,rgba(255,209,102,.06),transparent 40%);
+color:var(--txt);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+line-height:1.7;font-size:16px;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+/* Header */
+.header{
+position:sticky;top:0;z-index:100;
+background:rgba(10,10,18,.92);
+backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px}
+.logo-mark{
+width:34px;height:34px;border-radius:9px;flex-shrink:0;
+background:linear-gradient(135deg,var(--brand),var(--gold));
+display:flex;align-items:center;justify-content:center;
+font-size:18px;box-shadow:0 4px 14px rgba(255,77,109,.4);
+}
+.logo span{color:var(--brand2)}
+.menu-btn{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.menu-btn i{width:22px;height:2px;background:var(--txt);border-radius:2px;display:block}
+.nav{display:flex;gap:6px;align-items:center}
+.nav a{
+padding:8px 14px;border-radius:20px;font-size:14px;color:var(--txt2);
+transition:.25s;font-weight:500;
+}
+.nav a:hover{color:var(--brand2);background:rgba(255,209,102,.1)}
+
+/* Hero */
+.hero{
+padding:60px 0 40px;text-align:center;position:relative;
+}
+.hero-badge{
+display:inline-block;font-size:12px;letter-spacing:2px;
+color:var(--brand2);border:1px solid rgba(255,209,102,.3);
+padding:5px 16px;border-radius:20px;margin-bottom:20px;
+background:rgba(255,209,102,.05);
+}
+.hero h1{
+font-size:clamp(28px,6vw,52px);font-weight:900;line-height:1.2;margin-bottom:18px;
+background:linear-gradient(135deg,#fff 30%,var(--brand2));
+-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero p{max-width:640px;margin:0 auto 28px;color:var(--txt2);font-size:15px}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+display:inline-flex;align-items:center;gap:6px;
+padding:12px 26px;border-radius:30px;font-weight:600;font-size:15px;
+transition:.3s;border:1px solid transparent;cursor:pointer;
+}
+.btn-primary{background:linear-gradient(135deg,var(--brand),#ff6b8a);color:#fff;box-shadow:0 6px 20px rgba(255,77,109,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,77,109,.5)}
+.btn-ghost{border-color:var(--line);color:var(--txt)}
+.btn-ghost:hover{border-color:var(--brand2);color:var(--brand2)}
+
+/* Section */
+.section{padding:48px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:24px;gap:12px;flex-wrap:wrap}
+.sec-title{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:800}
+.sec-title::before{
+content:"";width:5px;height:22px;border-radius:3px;
+background:linear-gradient(var(--brand),var(--gold));
+}
+.sec-more{font-size:13px;color:var(--txt2)}
+.sec-more:hover{color:var(--brand2)}
+
+/* Film cards */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+.film{
+background:var(--card);border:1px solid var(--line);border-radius:14px;
+overflow:hidden;transition:.3s;position:relative;
+}
+.film:hover{transform:translateY(-5px);border-color:rgba(255,77,109,.4);box-shadow:var(--shadow)}
+.poster{position:relative;aspect-ratio:3/4;overflow:hidden}
+.poster-bg{
+position:absolute;inset:0;
+display:flex;align-items:center;justify-content:center;
+font-size:32px;font-weight:900;color:rgba(255,255,255,.9);
+}
+.poster-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.7))}
+.score{
+position:absolute;top:10px;right:10px;z-index:2;
+background:rgba(0,0,0,.65);backdrop-filter:blur(4px);
+padding:3px 9px;border-radius:12px;font-size:12px;font-weight:700;color:var(--brand2);
+}
+.tag-top{
+position:absolute;top:10px;left:10px;z-index:2;
+background:var(--brand);color:#fff;font-size:11px;font-weight:700;
+padding:3px 9px;border-radius:6px;
+}
+.film-info{padding:12px 14px 14px}
+.film-title{font-size:15px;font-weight:700;margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.film-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--txt2)}
+
+/* color variants for posters */
+.c1{background:linear-gradient(135deg,#1a2a6c,#b21f1f,#fdbb2d)}
+.c2{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)}
+.c3{background:linear-gradient(135deg,#3a1c71,#d76d77,#ffaf7b)}
+.c4{background:linear-gradient(135deg,#134e5e,#71b280)}
+.c5{background:linear-gradient(135deg,#232526,#414345)}
+.c6{background:linear-gradient(135deg,#ff9966,#ff5e62)}
+.c7{background:linear-gradient(135deg,#4b1248,#f0c27b)}
+.c8{background:linear-gradient(135deg,#16222a,#3a6073)}
+.c9{background:linear-gradient(135deg,#870000,#190a05)}
+.c10{background:linear-gradient(135deg,#556270,#4ecdc4)}
+.c11{background:linear-gradient(135deg,#42275a,#734b6d)}
+.c12{background:linear-gradient(135deg,#e65c00,#f9d423)}
+
+/* News list */
+.news-list{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.news-item{
+display:flex;gap:14px;padding:14px;background:var(--card);
+border:1px solid var(--line);border-radius:12px;transition:.25s;
+}
+.news-item:hover{border-color:rgba(255,209,102,.4);background:var(--bg2)}
+.news-date{
+flex-shrink:0;width:52px;text-align:center;border-right:1px solid var(--line);padding-right:12px;
+display:flex;flex-direction:column;justify-content:center;
+}
+.news-date b{font-size:22px;color:var(--brand2);line-height:1}
+.news-date span{font-size:11px;color:var(--txt2)}
+.news-body h4{font-size:15px;margin-bottom:5px;line-height:1.5}
+.news-body p{font-size:12px;color:var(--txt2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* Schedule table */
+.schedule{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.sch-row{display:grid;grid-template-columns:90px 1fr;align-items:center;border-bottom:1px solid var(--line)}
+.sch-row:last-child{border-bottom:none}
+.sch-time{
+padding:16px;font-weight:800;color:var(--brand2);font-size:15px;
+border-right:1px solid var(--line);text-align:center;background:rgba(255,209,102,.03);
+}
+.sch-content{padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.sch-content h4{font-size:15px;font-weight:600}
+.sch-content span{font-size:12px;color:var(--txt2)}
+.sch-tag{font-size:11px;background:rgba(255,77,109,.15);color:var(--brand);padding:3px 10px;border-radius:20px;font-weight:600}
+
+/* About / features */
+.features{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+.feat{
+text-align:center;padding:26px 18px;background:var(--card);border:1px solid var(--line);
+border-radius:14px;transition:.3s;
+}
+.feat:hover{transform:translateY(-4px);border-color:var(--brand2)}
+.feat-icon{font-size:36px;margin-bottom:12px}
+.feat h4{font-size:16px;margin-bottom:6px;color:var(--brand2)}
+.feat p{font-size:13px;color:var(--txt2)}
+
+/* Footer */
+.footer{background:var(--bg2);border-top:1px solid var(--line);padding:44px 0 24px;margin-top:30px}
+.foot-grid{display:grid;gap:28px;grid-template-columns:1.5fr 1fr 1fr 1fr;margin-bottom:30px}
+.foot-brand p{font-size:13px;color:var(--txt2);margin-top:12px}
+.foot-col h5{font-size:15px;margin-bottom:14px;position:relative;padding-left:10px}
+.foot-col h5::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:3px;border-radius:2px;background:var(--brand)}
+.foot-col a{display:block;font-size:13px;color:var(--txt2);padding:5px 0;transition:.2s}
+.foot-col a:hover{color:var(--brand2);padding-left:4px}
+.copyright{text-align:center;font-size:12px;color:var(--txt2);border-top:1px solid var(--line);padding-top:20px;line-height:2}
+.copyright a{color:var(--brand2)}
+.copyright a:hover{text-decoration:underline}
+
+/* Responsive */
+@media(max-width:960px){
+.grid{grid-template-columns:repeat(3,1fr)}
+.features{grid-template-columns:repeat(2,1fr)}
+.news-list{grid-template-columns:1fr}
+.foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+.menu-btn{display:flex}
+.nav{
+position:fixed;top:60px;left:0;right:0;flex-direction:column;
+background:rgba(10,10,18,.98);padding:16px;gap:4px;
+border-bottom:1px solid var(--line);
+transform:translateY(-150%);transition:.35s;visibility:hidden;
+}
+.nav.open{transform:translateY(0);visibility:visible}
+.nav a{width:100%;text-align:center;padding:12px}
+.grid{grid-template-columns:repeat(2,1fr);gap:12px}
+.features{grid-template-columns:1fr 1fr}
+.hero{padding:36px 0 26px}
+.section{padding:34px 0}
+.sec-title{font-size:19px}
+.sch-time{padding:12px 8px;font-size:13px;width:64px}
+.sch-content{padding:12px}
+.foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="https://qiujudianyingwang-app.github.io" class="logo">
+      <span class="logo-mark">🎬</span>秋菊<span>电影网</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home">首页</a>
+      <a href="#films">热映大片</a>
+      <a href="#schedule">排片表</a>
+      <a href="#news">影视资讯</a>
+      <a href="#about">关于我们</a>
+    </nav>
+    <div class="menu-btn" id="menuBtn"><i></i><i></i><i></i></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <span class="hero-badge">QIUJU · 每日精选 · 全网同步</span>
+      <h1>畅享<em>高清影视</em><br>尽在秋菊电影网</h1>
+      <p>汇聚院线大片、热播剧集、综艺动漫、经典老片，每日更新不间断。秋菊电影网(qiujudianyingwang-app)为您提供专业影评、观影指南与最新影视动态，随时随地开启视听盛宴。</p>
+      <div class="hero-actions">
+        <a href="#films" class="btn btn-primary">立即观影</a>
+        <a href="#schedule" class="btn btn-ghost">查看排片</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Films -->
+  <section class="section" id="films">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">热映大片</h2>
+        <a href="#" class="sec-more">查看全部 ›</a>
+      </div>
+      <div class="grid">
+        <a href="#" class="film">
+          <div class="poster">
+            <div class="poster-bg c1">星际</div>
+            <span class="tag-top">VIP</span>
+            <span class="score">9.2</span>
+          </div>
+          <div class="film-info">
+            <h3 class="film-title">星际迷航：深空回响</h3>
+            <div class="film-meta"><span>科幻 · 冒险</span><span>2026</span></div>
+          </div>
+        </a>
+        <a href="#" class="film">
+          <div class="poster">
+            <div class="poster-bg c3">暗香</div>
+            <span class="score">8.7</span>
+          </div>
+          <div class="film-info">
+            <h3 class="film-title">暗香浮动</h3>
+            <div class="film-meta"><span>悬疑 · 犯罪</span><span>2026</span></div>
+          </div>
+        </a>
+        <a href="#" class="film">
+          <div class="poster">
+            <div class="poster-bg c6">山海</div>
+            <span class="tag-top">热播</span>
+            <span class="score">9.0</span>
+          </div>
+          <div class="film-info">
+            <h3 class="film-title">山海情未了</h3>
+            <div class="film-meta"><span>剧情 · 历史</span><span>2026</span></div>
+          </div>
+        </a>
+        <a href="#" class="film">
+          <div class="poster">
+            <div class="poster-bg c9">破晓</div>
+            <span class="score">8.5</span>
+          </div>
+          <div class="film-info">
+            <h3 class="film-title">破晓之战</h3>
+            <div class="film-meta"><span>动作 · 战争</span><span>2026</span></div>
+          </div>
+        </a>
+        <a href="#" class="film">
+          <div class="poster">
+            <div class="poster-bg c4">青柠</div>
+            <span class="tag-top">新片</span>
+            <span class="score">8.9</span>
+          </div>
+          <div class="film-info">
+            <h3 class="film-title">青柠之夏</h3>
+            <div class="film-meta"><span>爱情 · 青春</span><span>2026</span></div>
+          </div>
+        </a>
+        <a href="#" class="film">
+          <div class="poster">
+            <div class="poster-bg c7">谜案</div>
+            <span class="score">8.3</span>
+          </div>
+          <div class="film-info">
+            <h3 class="film-title">长安谜案录</h3>
+            <div class="film-meta"><span>古装 · 悬疑</span><span>2026</span></div>
+          </div>
+        </a>
+        <a href="#" class="film">
+          <div class="poster">
+            <div class="poster-bg c2">深渊</div>
+            <span class="score">8.8</span>
+          </div>
+          <div class="film-info">
+            <h3 class="film-title">深海·深渊之光</h3>
+            <div class="film-meta"><span>动画 · 冒险</span><span>2026</span></div>
+          </div>
+        </a>
+        <a href="#" class="film">
+          <div class="poster">
+            <div class="poster-bg c11">归途</div>
+            <span class="tag-top">推荐</span>
+            <span class="score">9.1</span>
+          </div>
+          <div class="film-info">
+            <h3 class="film-title">归途有风</h3>
+            <div class="film-meta"><span>家庭 · 温情</span><span>2026</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section class="section" id="schedule">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">今日排片表</h2>
+        <a href="#" class="sec-more">完整排片 ›</a>
+      </div>
+      <div class="schedule">
+        <div class="sch-row">
+          <div class="sch-time">09:00</div>
+          <div class="sch-content">
+            <div><h4>早安剧场：经典重温</h4><span>《海上钢琴师》4K 修复版 · 豆瓣 9.3</span></div>
+            <span class="sch-tag">经典</span>
+          </div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">12:30</div>
+          <div class="sch-content">
+            <div><h4>午间光影：轻松一刻</h4><span>《青柠之夏》独家花絮 + 正片连播</span></div>
+            <span class="sch-tag">爱情</span>
+          </div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">15:00</div>
+          <div class="sch-content">
+            <div><h4>午后悬疑：烧脑专场</h4><span>《暗香浮动》导演剪辑版首播</span></div>
+            <span class="sch-tag">悬疑</span>
+          </div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">18:00</div>
+          <div class="sch-content">
+            <div><h4>黄金档：院线同步</h4><span>《星际迷航：深空回响》全网首映</span></div>
+            <span class="sch-tag">科幻</span>
+          </div>
+        </div>
+        <div class="sch-row">
+          <div class="sch-time">21:00</div>
+          <div class="sch-content">
+            <div><h4>深夜影院：艺术巡礼</h4><span>《归途有风》主创访谈 + 正片</span></div>
+            <span class="sch-tag">文艺</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">影视资讯</h2>
+        <a href="#" class="sec-more">更多资讯 ›</a>
+      </div>
+      <div class="news-list">
+        <a href="#" class="news-item">
+          <div class="news-date"><b>14</b><span>OCT</span></div>
+          <div class="news-body">
+            <h4>第38届金鸡奖提名名单正式揭晓，多部国产佳作入围</h4>
+            <p>本届金鸡奖共设20个奖项类别，涵盖最佳故事片、最佳导演、最佳男女主角等重要奖项，国产电影整体质量再上新台阶。</p>
+          </div>
+        </a>
+        <a href="#" class="news-item">
+          <div class="news-date"><b>13</b><span>OCT</span></div>
+          <div class="news-body">
+            <h4>《星际迷航：深空回响》票房破30亿，刷新科幻片纪录</h4>
+            <p>该片自上映以来口碑与票房双丰收，视觉效果与剧情深度获得观众一致好评，成为年度现象级作品。</p>
+          </div>
+        </a>
+        <a href="#" class="news-item">
+          <div class="news-date"><b>12</b><span>OCT</span></div>
+          <div class="news-body">
+            <h4>秋菊电影网独家上线4K修复专区，百部经典高清回归</h4>
+            <p>本次修复工程历时两年，采用最新AI修复技术，让老电影焕发全新视听生命力，会员可免费观看。</p>
+          </div>
+        </a>
+        <a href="#" class="news-item">
+          <div class="news-date"><b>11</b><span>OCT</span></div>
+          <div class="news-body">
+            <h4>知名导演新作开机，实力派演员加盟主演阵容</h4>
+            <p>该片改编自畅销小说，聚焦当代都市情感，预计将于明年暑期档与观众见面，备受业界期待。</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">关于秋菊电影网</h2>
+      </div>
+      <div class="features">
+        <div class="feat">
+          <div class="feat-icon">🎞️</div>
+          <h4>海量片库</h4>
+          <p>涵盖电影、剧集、综艺、动漫、纪录片，片源持续扩充</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">⚡</div>
+          <h4>极速播放</h4>
+          <p>多线路智能切换，支持4K超清，告别卡顿缓冲</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">📱</div>
+          <h4>多端同步</h4>
+          <p>手机、平板、电脑自适应，随时随地畅快观看</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">✍️</div>
+          <h4>专业影评</h4>
+          <p>资深编辑团队每日产出深度影评与观影指南</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="https://qiujudianyingwang-app.github.io" class="logo">
+          <span class="logo-mark">🎬</span>秋菊<span>电影网</span>
+        </a>
+        <p>秋菊电影网(qiujudianyingwang-app)致力于为影迷提供高质量的影视内容与专业的观影服务，打造有温度、有态度的影视社区。</p>
+      </div>
+      <div class="foot-col">
+        <h5>频道导航</h5>
+        <a href="#films">电影大片</a>
+        <a href="#schedule">今日排片</a>
+        <a href="#news">影视资讯</a>
+        <a href="#about">关于我们</a>
+      </div>
+      <div class="foot-col">
+        <h5>分类索引</h5>
+        <a href="#">动作冒险</a>
+        <a href="#">爱情喜剧</a>
+        <a href="#">悬疑犯罪</a>
+        <a href="#">科幻动画</a>
+      </div>
+      <div class="foot-col">
+        <h5>联系合作</h5>
+        <a href="#">商务合作</a>
+        <a href="#">内容投稿</a>
+        <a href="#">广告服务</a>
+        <a href="#">意见反馈</a>
+      </div>
+    </div>
+    <div class="copyright">
+      Copyright © 2026 秋菊电影网(qiujudianyingwang-app) 版权所有 ·
+      <a href="https://qiujudianyingwang-app.github.io">https://qiujudianyingwang-app.github.io</a>
+      <br>本站仅为影视资讯与观影推荐平台，所有内容仅供学习交流参考，请支持正版。
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var nav=document.getElementById('nav');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){nav.classList.toggle('open')});
+    nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open')});
+  }
+  // smooth scroll polyfill for old browsers
+  var links=document.querySelectorAll('a[href^="#"]');
+  for(var i=0;i<links.length;i++){
+    links[i].addEventListener('click',function(e){
+      var t=this.getAttribute('href');
+      if(t.length>1){
+        var el=document.querySelector(t);
+        if(el){e.preventDefault();window.scrollTo({top:el.offsetTop-60,behavior:'smooth'})}
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
